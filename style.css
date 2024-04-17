@@ -528,3 +528,15 @@ section {
         margin-top: 2re;
     }
 }
+.contact-left {
+    flex-basis: 35%;
+}
+.contact-left p {
+    margin-top: 30px;
+    font-size: 15px;
+}
+.contact-left p i {
+    color: var(--main-color);
+    margin-right: 15px;
+    font-size: 25px;
+}
