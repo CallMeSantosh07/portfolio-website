@@ -238,6 +238,9 @@ section {
     line-height: 1.2;
 
 }
+.about-content h2 span {
+    color: #0ef;
+}
 .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
@@ -246,7 +249,9 @@ section {
 .services h2 {
     margin-bottom: 5rem;
 }
-
+.services h2 span {
+    color: #0ef;
+}
 .services-container {
     display: flex;
     justify-content: center;
@@ -286,7 +291,9 @@ section {
 .portfolio h2 {
     margin-bottom: 4rem;
 }
-
+.portfolio h2 span {
+    color: #0ef;
+}
 .portfolio-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -351,7 +358,9 @@ section {
 .contact h2 {
     margin-bottom: 3rem;
 }
-
+.contact h2 span {
+    color: #0ef;
+}
 .contact form {
     max-width: 70rem;
     margin: 1rem auto;
