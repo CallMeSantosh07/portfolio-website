@@ -126,11 +126,9 @@ section {
     
 }
 .Santosh-img img {
-    max-width: 580px;
+    max-width: 570px;
     margin-right: -20px;
-    opacity: 0;
-    animation: zoomIn 1s ease forwards;
-    animation-delay: 2s;
+    
 }
 
 .Social-media a {
@@ -234,7 +232,7 @@ section {
 
 .about-content h2 {
     text-align: left;
-    line-height: 1.2;
+    line-height: 1;
 
 }
 .about-content h2 span {
