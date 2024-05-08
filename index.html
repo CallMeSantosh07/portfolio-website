@@ -157,10 +157,11 @@
                     <input type="text" placeholder="Email Subject">
                 </div>
                 <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                <input type="submit" value="Send Message" class="btn" onclick="showAlert()">
+                <input type="submit" value="Send Message" class="btn" onclick="showAlert(), Location.reload()">
                 <script>
                     function showAlert(){
                         alert ("Your message sent Sucessfully")
+                        
                     }
                 </script>
             </form>
@@ -175,8 +176,6 @@
         </footer>
 
         <script src="https://unpkg.com/scrollreveal"></script>
-
-
 
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
