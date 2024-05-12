@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width,intial-scale=1.0">
-        <link rel="icon" type="png" href="Favicon.png">
+        <link rel="icon" type="png" href="Favicon.jpeg">
         <title>Santosh Chapgain</title>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="style.css">
@@ -58,7 +58,7 @@
                 <div class="services-box">
                     <i class='bx bx-code-alt'></i>
                     <h3>Web Development</h3>
-                    <p>Proficient in HTML, CSS, JavaScript, and responsive design. Elevate your online presence with a sleek, tailored portfolio.</p>
+                    <p>Designed and developed a dynamic e-commerce website using HTML, CSS, and JavaScript, focusing on user-friendly navigation and seamless transactions.</p>
                     <a href="#" class="btn">Read More</a>
                 </div>
 
@@ -157,7 +157,13 @@
                     <input type="text" placeholder="Email Subject">
                 </div>
                 <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                <input type="submit" value="Send Message" class="btn">
+                <input type="submit" value="Send Message" class="btn" onclick="showAlert(), Location.reload()">
+                <script>
+                    function showAlert(){
+                        alert ("Your message sent Sucessfully")
+                        
+                    }
+                </script>
             </form>
         </section>
         <footer class="footer">
@@ -170,8 +176,6 @@
         </footer>
 
         <script src="https://unpkg.com/scrollreveal"></script>
-
-
 
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 

@@ -16,7 +16,7 @@
     --bg-color: #1f242d;
     --second-bg-color: #323946;
     --text-color: #fff;
-    --main-color: #0ef;
+    --main-color: #FCCB06;
 
 }
 html {
@@ -72,7 +72,7 @@ section {
 }
 .navbar a:hover,
 .navbar a.active {
-    color: #0ef;
+    color: var(--main-color);
 
 }
 #menu-icon {
@@ -109,7 +109,7 @@ section {
 }
 
 .home-content h3 span {
-    color: #0ef;
+    color: var(--main-color);
 }
 
 .home-content h1 {
@@ -138,26 +138,26 @@ section {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #0ef;
+    border: 2px solid var(--main-color);
     border-radius: 50%;
     font-size: 20px;
-    color: #0ef;
+    color: var(--main-color);
     text-decoration: none;
     margin: 30px 15px 30px 0;
     transition: .5s ease;
     
 }
 .Social-media a:hover {
-    background: #0ef;
+    background: var(--main-color);
     color: #1f242d;
-    box-shadow: 0 0 20px #0ef;
+    box-shadow: 0 0 20px var(--main-color);
 }
 
 .btn {
     padding: 12px 28px;
-    background: #0ef;
+    background: var(--main-color);
     border-radius: 40px;
-    box-shadow: 0 0 10px #0ef;
+    box-shadow: 0 0 10px var(--main-color);
     font-size: 16px;
     color: #1f242d;
     letter-spacing: 1px;
@@ -236,7 +236,7 @@ section {
 
 }
 .about-content h2 span {
-    color: #0ef;
+    color: var(--main-color);
 }
 .about-content p {
     font-size: 1.9rem;
@@ -247,7 +247,7 @@ section {
     margin-bottom: 5rem;
 }
 .services h2 span {
-    color: #0ef;
+    color: var(--main-color);
 }
 .services-container {
     display: flex;
@@ -289,7 +289,7 @@ section {
     margin-bottom: 4rem;
 }
 .portfolio h2 span {
-    color: #0ef;
+    color: var(--main-color);
 }
 .portfolio-container {
     display: grid;
@@ -356,7 +356,7 @@ section {
     margin-bottom: 3rem;
 }
 .contact h2 span {
-    color: #0ef;
+    color: var(--main-color);
 }
 .contact form {
     max-width: 70rem;
