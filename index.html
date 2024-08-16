@@ -159,6 +159,13 @@
                 </div>
                 <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
                 <input type="submit" value="Send Message" class="btn" onclick="alert('You message sent Sucessfully')">
+                <input type="submit" value="Send Message" class="btn" onclick="showAlert(), Location.reload()">
+                <script>
+                    function showAlert(){
+                        alert ("Your message sent Sucessfully")
+                        
+                    }
+                </script>
             </form>
         </section>
         <footer class="footer">
