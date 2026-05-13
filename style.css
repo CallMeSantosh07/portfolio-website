@@ -277,7 +277,62 @@ section {
 .services-box h3 {
     font-size: 2.6rem;
 }
-
+.research {
+    background: var(--bg-color);
+    padding: 5rem 9% 5rem;
+}
+.research .heading {
+    margin-bottom: 4rem;
+}
+.research-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.research-box {
+    flex: 1 1 40rem;
+    background: var(--second-bg-color);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.research-box h3 {
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+}
+.research-box p {
+    margin-bottom: 1.6rem;
+    font-size: 1.5rem;
+}
+.research-box .btn {
+    background: var(--main-color);
+    color: #1f242d;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-size: 1.4rem;
+    transition: background 0.3s;
+    display: inline-block;
+    margin-right: 1rem;
+}
+.research-box .btn:hover {
+    background: #fff;
+    color: var(--main-color);
+}
+.research-upload {
+    margin-top: 2rem;
+}
+.research-upload .btn {
+    cursor: pointer;
+}
+.research-upload small {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #aaa;
+}
 .services-box p {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
@@ -296,6 +351,7 @@ section {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
+    padding: 2rem 0;
 }
 .portfolio-container .portfolio-box {
     position: relative;
@@ -307,6 +363,8 @@ section {
 .portfolio-box img {
     width: 100%;
     transition: .5s ease;
+    object-fit: cover;
+    display: block;
 }
 .portfolio-box:hover img {
     transform: scale(1.1);
