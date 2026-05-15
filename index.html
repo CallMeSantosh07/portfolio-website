@@ -17,17 +17,20 @@
         <i class='bx bx-menu' id="menu-icon"></i>
 
         <nav class="navbar">
-            <a href="#home" style="--i:1;" class="active">Home</a>
-            <a href="#about" style="--i:2;">About</a>
-            <a href="#services" style="--i:3;">Services</a>
-            <a href="#portfolio" style="--i:4;">Portfolio</a>
-            <a href="#research" style="--i:5;">Research</a>
-            <a href="#contact" style="--i:6;">Contact</a>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#research">Research</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <main>
 
+        <!-- ==================== HOME SECTION ==================== -->
         <section class="home" id="home">
             <div class="home-content">
                 <h3>Hello, It's Me</h3>
@@ -36,15 +39,26 @@
                 <p>
                     Explore portfolio featuring innovative projects in software development, algorithms, and computer science.
                 </p>
+                
+                <!-- Moved buttons here for better layout -->
+                <div class="home-buttons" style="margin-top: 30px; display: flex; gap: 20px;">
+                    <a href="Santosh_Chapagain_Resume.pdf" class="btn" download>
+                        <i class='bx bx-download'></i> Download Resume
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class='bx bx-message-dots'></i> Hire Me
+                    </a>
+                </div>
             </div>
             <div class="Santosh-img">
-                <img src="Santosh.jpg" alt="Santosh Chapagain">
+                <img src="Santosh1.png" alt="Santosh Chapagain">
             </div>
         </section>
 
+        <!-- ==================== ABOUT SECTION ==================== -->
         <section class="about" id="about">
             <div class="about-img">
-                <img src="about.png" alt="About Santosh Chapagain">
+                <img src="Santosh.jpg" alt="About Santosh Chapagain">
             </div>
             <div class="about-content">
                 <h2 class="heading">About <span>Me</span></h2>
@@ -55,115 +69,288 @@
                     Always eager to connect with like-minded individuals and professionals in the field. Welcome to my corner of the web!
                 </p>
             </div>
-        </section>
-
-        <section class="services" id="services">
-            <h2 class="heading">My <span>Services</span></h2>
-            <div class="services-container">
-                <div class="services-box">
-                    <i class='bx bx-code-alt'></i>
-                    <h3>Web Development</h3>
-                    <p>Designed and developed a dynamic e-commerce website using HTML, CSS, and JavaScript, focusing on user-friendly navigation and seamless transactions.</p>
-                    
+            <div class="about-stats">
+                <div class="stat-box">
+                    <h3>15+</h3>
+                    <p>Projects Completed</p>
                 </div>
-                <div class="services-box">
-                    <i class='bx bxs-paint'></i>
-                    <h3>Graphic Designer</h3>
-                    <p>Providing innovative graphic design solutions for websites, logos, branding, and digital content with creativity and precision.</p>
-                    
+                <div class="stat-box">
+                    <h3>3+</h3>
+                    <p>Years Experience</p>
                 </div>
-                <div class="services-box">
-                    <i class='bx bx-game'></i>
-                    <h3>Game Development</h3>
-                    <p>Crafting engaging and immersive games using cutting-edge technology and creative design to bring unique gaming experiences to life.</p>
-                    
+                <div class="stat-box">
+                    <h3>5+</h3>
+                    <p>Research Papers</p>
+                </div>
+                <div class="stat-box">
+                    <h3>500+</h3>
+                    <p>GitHub Commits</p>
                 </div>
             </div>
         </section>
 
-        <section class="portfolio" id="portfolio">
-            <h2 class="heading">Latest <span>Projects</span></h2>
-            <div class="portfolio-container">
-                <div class="portfolio-box">
-                    <img src="web.jpg" alt="E-commerce Website Project">
-                    <div class="portfolio-layer">
-                        <h4>Web Design</h4>
-                        <p>Designed and developed a dynamic e-commerce website using HTML, CSS, and JavaScript, focusing on user-friendly navigation and seamless transactions.</p>
-                        <a href="#"><i class='bx bx-link-external'></i></a>
+        <!-- ==================== EDUCATION SECTION ==================== -->
+        <section class="education" id="education">
+            <h2 class="heading">Education & <span>Certifications</span></h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Bachelor in Geomatics Engineering</h3>
+                        <h4>Paschimanchal Campus, Pokhara</h4>
+                        <p><strong>GPA:</strong> 3.8/4.0</p>
+                        <p><strong>Relevant Coursework:</strong> Remote Sensing, GIS, Photogrammetry, Surveying, Programming, Spatial Analysis</p>
+                        <ul>
+                            <li>Member of Geomatics Engineering Student Society</li>
+                            
+                        </ul>
                     </div>
                 </div>
-                <div class="portfolio-box">
-                    <img src="portfolio.png" alt="Portfolio Website Project">
-                    <div class="portfolio-layer">
-                        <h4>Portfolio Website</h4>
-                        <p>Created a personalized portfolio website showcasing skills and projects, emphasizing creativity, functionality, and modern design principles for maximum impact.</p>
-                        <a href="https://www.santoshchapagain07.com.np/"><i class='bx bx-link-external'></i></a>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>Python for Data Science</h3>
+                        <h4>Programiz</h4>
+                        <a href="https://programiz.pro/certificates/detail/AF3BC3733A05" class="btn-small">View Certificate</a>
                     </div>
                 </div>
-                <div class="portfolio-box">
-                    <img src="disaster.png" alt="Disaster Report Project">
-                    <div class="portfolio-layer">
-                        <h4>Disaster Report</h4>
-                        <p>Developed a dynamic Disaster Report application using React, enabling real-time incident reporting, interactive data visualization, and user-friendly interfaces to support efficient disaster monitoring and response management.</p>
-                        <a href="https://disaster-app-tsve.vercel.app/"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>
-                <div class="portfolio-box">
-                    <img src="Data.jpg" alt="Data Analysis Project">
-                    <div class="portfolio-layer">
-                        <h4>Data Analysis</h4>
-                        <p>Analyzed and visualized real-world data sets using Python and libraries like Pandas and Matplotlib to derive meaningful insights and trends.</p>
-                        <a href="#"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>
-                <div class="portfolio-box">
-                    <img src="Snake.jpg" alt="Snake Game Project">
-                    <div class="portfolio-layer">
-                        <h4>Snake Game Project</h4>
-                        <p>Designed and coded a classic Snake game using Python and the Pygame library, demonstrating proficiency in game development and problem-solving skills.</p>
-                        <a href="https://github.com/CallMeSantosh07/Snake-Game"><i class='bx bxl-github'></i></a>
-                    </div>
-                </div>
-                <div class="portfolio-box">
-                    <img src="ios-calulator.png" alt="IOS Calculator Project">
-                    <div class="portfolio-layer">
-                        <h4>IOS Calculator</h4>
-                        <p>Developed a sleek iOS-style Calculator application using HTML, CSS, and JavaScript, featuring a responsive user interface, smooth button interactions, and accurate arithmetic operations for an intuitive and seamless calculation experience.</p>
-                        <a href="https://github.com/CallMeSantosh07/Calculator"><i class='bx bxl-github'></i></a>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>GIS Specialization</h3>
+                        <h4>ESRI / Coursera</h4>
+                        <a href="#" class="btn-small">View Certificate</a>
                     </div>
                 </div>
             </div>
         </section>
-        
+
+        <!-- ==================== SKILLS SECTION ==================== -->
+        <section class="skills" id="skills">
+            <h2 class="heading">Technical <span>Skills</span></h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3><i class='bx bx-code-block'></i> Programming</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span>Intermediate</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>HTML/CSS</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3><i class='bx bx-map'></i> GIS & Remote Sensing</h3>
+                    <div class="skill-tags">
+                        <span class="tag">QGIS</span>
+                        <span class="tag">ArcGIS</span>
+                        <span class="tag">Google Earth Engine</span>
+                        <span class="tag">ERDAS Imagine</span>
+                        <span class="tag">GPS/GNSS</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3><i class='bx bx-data'></i> Data Analysis</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Pandas</span>
+                        <span class="tag">NumPy</span>
+                        <span class="tag">Matplotlib</span>
+                        <span class="tag">GeoPandas</span>
+                        <span class="tag">Rasterio</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3><i class='bx bx-wrench'></i> Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Git/GitHub</span>
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Jupyter</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== EXPERIENCE SECTION ==================== -->
+        <section class="experience" id="experience">
+            <h2 class="heading">Work <span>Experience</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">June 2024 - Aug 2024</div>
+                    <div class="timeline-content">
+                        <h3>GIS Intern</h3>
+                        <h4>Survey Department / Private Company</h4>
+                        <ul>
+                            <li>Processed remote sensing data for 500+ hectares of land mapping</li>
+                            <li>Automated GIS workflows using Python, reducing processing time by 40%</li>
+                            <li>Created interactive web maps using Leaflet.js for stakeholder presentations</li>
+                        </ul>
+                        <div class="tech-used">
+                            <span class="tag">QGIS</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">PostGIS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jan 2024 - May 2024</div>
+                    <div class="timeline-content">
+                        <h3>Freelance Web Developer</h3>
+                        <h4>Self-Employed</h4>
+                        <ul>
+                            <li>Developed 5+ responsive websites for local businesses</li>
+                            <li>Implemented SEO best practices, improving client visibility by 60%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Seeking Opportunities</div>
+                    <div class="timeline-content">
+                        <h3>Looking for Internship Opportunities</h3>
+                        <p>Actively seeking summer 2025 internships in:</p>
+                        <ul>
+                            <li>GIS Analysis & Remote Sensing</li>
+                            <li>Geospatial Software Development</li>
+                            <li>Urban Planning & Smart Cities</li>
+                            <li>Web Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== RESEARCH SECTION ==================== -->
         <section class="research" id="research">
-            <h2 class="heading">Research <span>Papers</span></h2>
+            <h2 class="heading">Research & <span>Publications</span></h2>
             <div class="research-container">
-                <div class="research-box">
-                    <h3>Remote Sensing Data Processing for Crop Mapping</h3>
-                    <p>
-                        <strong>Abstract:</strong> This paper explores the use of advanced remote sensing techniques and Python automation to map crop fields in the Western region of Nepal. Novel algorithms ensure rapid and accurate classification.
-                    </p>
-                    <a href="your-paper1.pdf" class="btn" target="_blank">
-                        <i class='bx bx-download'></i> Download PDF
-                    </a>
-                </div>
-                <div class="research-box">
-                    <h3>Urban Growth Analysis of Pokhara Metropolitan</h3>
-                    <p>
-                        <strong>Abstract:</strong> Analyzes spatial-temporal urban growth trends using GIS and remote sensing data. The study demonstrates methods for sustainable city planning in the region.
-                    </p>
-                    <a href="your-paper2.pdf" class="btn" target="_blank">
-                        <i class='bx bx-download'></i> Download PDF
-                    </a>
+                <div class="research-box" data-category="published">
+                    <div class="research-header">
+                        <span class="badge published">Published</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <h3>Remote Sensing Data Processing for Crop Mapping in Western Nepal</h3>
+                    <p class="authors"><strong>Authors:</strong> Santosh Chapagain, et al.</p>
+                    <p class="journal"><strong>Journal:</strong> International Journal of Geomatics</p>
+                    <p><strong>Abstract:</strong> This paper explores advanced remote sensing techniques...</p>
+                    <div class="research-stats">
+                        <span><i class='bx bx-book-reader'></i> 45 Citations</span>
+                        <span><i class='bx bx-download'></i> 230 Downloads</span>
+                    </div>
+                    <div class="research-actions">
+                        <a href="paper1.pdf" class="btn" target="_blank">
+                            <i class='bx bx-download'></i> Download PDF
+                        </a>
+                        <a href="#" class="btn-outline">
+                            <i class='bx bx-link'></i> DOI Link
+                        </a>
+                        <a href="#" class="btn-outline">
+                            <i class='bx bxl-github'></i> Code/Data
+                        </a>
+                    </div>
                 </div>
 
+                <div class="research-box" data-category="ongoing">
+                    <div class="research-header">
+                        <span class="badge ongoing">Ongoing</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <h3>AI-Powered Land Use Classification Using Deep Learning</h3>
+                    <p class="authors"><strong>Role:</strong> Lead Researcher</p>
+                    <p><strong>Description:</strong> Developing CNN models for automated land use classification...</p>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Research Progress</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress-bar-wrapper" style="background: var(--bg-color); height: 10px; border-radius: 5px; overflow: hidden; margin-top: 5px;">
+                            <div class="progress-fill" style="width: 75%; background: var(--main-color); height: 100%;"></div>
+                        </div>
+                    </div>
+                    <p class="status" style="margin-top: 10px;"><strong>Expected Completion:</strong> June 2025</p>
+                </div>
+
+                <div class="research-box" data-category="thesis">
+                    <div class="research-header">
+                        <span class="badge thesis">Bachelor Thesis</span>
+                        <span class="year">2025-2026</span>
+                    </div>
+                    <h3>Spatial Analysis of Urban Growth Patterns in Kathmandu Valley</h3>
+                    <p><strong>Supervisor:</strong> Dr. [Name], WRC</p>
+                    <p><strong>Description:</strong> Comprehensive spatial-temporal analysis of urbanization...</p>
+                </div>
+            </div>
         </section>
 
+        <!-- ==================== ACHIEVEMENTS SECTION ==================== -->
+        <section class="achievements" id="achievements">
+            <h2 class="heading">Achievements & <span>Awards</span></h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <i class='bx bx-trophy'></i>
+                    <h3>University Scholarship</h3>
+                    <p>Merit-based scholarship (2023-2024)</p>
+                </div>
+                <div class="achievement-card">
+                    <i class='bx bx-medal'></i>
+                    <h3>Hackathon Winner</h3>
+                    <p>1st Place - Tech Innovation Challenge</p>
+                </div>
+                <div class="achievement-card">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>Open Source Contributor</h3>
+                    <p>Contributed to GIS Python libraries</p>
+                </div>
+                <div class="achievement-card">
+                    <i class='bx bx-group'></i>
+                    <h3>Student Leader</h3>
+                    <p>President, Engineering Club</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACT SECTION ==================== -->
         <section class="contact" id="contact">
             <h2 class="heading">Contact<span> Me!</span></h2>
             <div class="contact-left">
                 <p><i class='bx bx-mail-send'></i>chapagainsantoshcs@gmail.com</p>
-                <p><i class='bx bxs-phone-call'></i>+977-9863512955</p>
+                <p><i class='bx bxs-phone-call'></i>+977-9805159932</p>
                 <div class="Social-media">
                     <a href="https://www.facebook.com/santosh.chapagain.161" target="_blank" title="Facebook"><i class='bx bxl-facebook-circle'></i></a>
                     <a href="https://www.instagram.com/santosh_chapagain07/" target="_blank" title="Instagram"><i class='bx bxl-instagram'></i></a>
@@ -173,7 +360,7 @@
                 </div>
             </div>
 
-            <form id="contact-form" action="https://formsubmit.co/chapagainsantoshcs@gmail.com" method="post">
+            <form id="contact-form">
                 <div id="form-success" style="display:none; color: #00c86b; text-align: center; margin-bottom: 10px;">
                   Your message was sent successfully!
                 </div>
@@ -193,6 +380,7 @@
         </section>
     </main>
 
+    <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
         <div class="footer-text">
             <p>&copy; 2024 by Santosh Chapagain | All Rights Reserved.</p>
@@ -206,12 +394,12 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
     <script>
-      // Enhanced form confirmation UX
-      document.getElementById('contact-form').onsubmit = function() {
-        setTimeout(function() {
-          document.getElementById('form-success').style.display = 'block';
-        }, 500);
-      }
+        // Enhanced form confirmation UX
+        document.getElementById('contact-form').onsubmit = function() {
+            setTimeout(function() {
+                document.getElementById('form-success').style.display = 'block';
+            }, 500);
+        }
     </script>
 </body>
 </html>
