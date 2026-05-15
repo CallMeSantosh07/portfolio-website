@@ -104,7 +104,6 @@
                         <p><strong>Relevant Coursework:</strong> Remote Sensing, GIS, Photogrammetry, Surveying, Programming, Spatial Analysis</p>
                         <ul>
                             <li>Member of Geomatics Engineering Student Society</li>
-                            
                         </ul>
                     </div>
                 </div>
@@ -362,7 +361,7 @@
 
             <form id="contact-form">
                 <div id="form-success" style="display:none; color: #00c86b; text-align: center; margin-bottom: 10px;">
-                  Your message was sent successfully!
+                    Your message was sent successfully!
                 </div>
                 <div class="input-box">
                     <input type="text" name="name" required placeholder="Full Name">
@@ -376,6 +375,52 @@
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
                 <input type="submit" value="Send Message" class="btn">
+                
+                <script>
+                    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+                        e.preventDefault(); // Prevents page from reloading
+
+                        // Get the values from the form
+                        const form = e.target;
+                        const data = {
+                            name: form.name.value,
+                            email: form.email.value,
+                            number: form.number.value,
+                            subject: form.subject.value,
+                            message: form.message.value
+                        };
+
+                        // Change button text to show it's sending
+                        const submitBtn = form.querySelector('input[type="submit"]');
+                        submitBtn.value = "Sending...";
+
+                        try {
+                            // Send the data to your Node.js backend
+                            const response = await fetch('http://localhost:5000/send', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(data)
+                            });
+
+                            if (response.ok) {
+                                document.getElementById('form-success').style.display = 'block';
+                                document.getElementById('form-success').style.color = '#00c86b';
+                                document.getElementById('form-success').innerText = 'Your message was sent successfully!';
+                                form.reset(); // Clear the form
+                            } else {
+                                throw new Error('Failed to send');
+                            }
+                        } catch (error) {
+                            document.getElementById('form-success').style.display = 'block';
+                            document.getElementById('form-success').style.color = 'red';
+                            document.getElementById('form-success').innerText = 'Something went wrong. Please try again.';
+                        } finally {
+                            submitBtn.value = "Send Message"; // Reset button text
+                        }
+                    });
+                </script>
             </form>
         </section>
     </main>
