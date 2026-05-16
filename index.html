@@ -360,9 +360,14 @@
             </div>
 
             <form id="contact-form">
-                <div id="form-success" style="display:none; color: #00c86b; text-align: center; margin-bottom: 10px;">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="470fd367-bfe6-4cfd-af28-846e36c52c91">
+                
+                <!-- Success Message -->
+                <div id="form-success" style="display:none; color: #00c86b; text-align: center; margin-bottom: 10px; font-size: 1.6rem; font-weight: 600;">
                     Your message was sent successfully!
                 </div>
+
                 <div class="input-box">
                     <input type="text" name="name" required placeholder="Full Name">
                     <input type="email" name="email" required placeholder="Email Address">
@@ -372,56 +377,61 @@
                     <input type="text" name="subject" required placeholder="Subject">
                 </div>
                 <textarea name="message" required placeholder="Your Message" rows="5"></textarea>
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="submit" value="Send Message" class="btn">
                 
-                <script>
-                    document.getElementById('contact-form').addEventListener('submit', async function(e) {
-                        e.preventDefault(); // Prevents page from reloading
+                <!-- Anti-Spam Honeypot -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-                        // Get the values from the form
-                        const form = e.target;
-                        const data = {
-                            name: form.name.value,
-                            email: form.email.value,
-                            number: form.number.value,
-                            subject: form.subject.value,
-                            message: form.message.value
-                        };
-
-                        // Change button text to show it's sending
-                        const submitBtn = form.querySelector('input[type="submit"]');
-                        submitBtn.value = "Sending...";
-
-                        try {
-                            // Send the data to your Node.js backend
-                            const response = await fetch('http://localhost:5000/send', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json'
-                                },
-                                body: JSON.stringify(data)
-                            });
-
-                            if (response.ok) {
-                                document.getElementById('form-success').style.display = 'block';
-                                document.getElementById('form-success').style.color = '#00c86b';
-                                document.getElementById('form-success').innerText = 'Your message was sent successfully!';
-                                form.reset(); // Clear the form
-                            } else {
-                                throw new Error('Failed to send');
-                            }
-                        } catch (error) {
-                            document.getElementById('form-success').style.display = 'block';
-                            document.getElementById('form-success').style.color = 'red';
-                            document.getElementById('form-success').innerText = 'Something went wrong. Please try again.';
-                        } finally {
-                            submitBtn.value = "Send Message"; // Reset button text
-                        }
-                    });
-                </script>
+                <input type="submit" value="Send Message" class="btn">
             </form>
+
+            <script>
+                document.getElementById('contact-form').addEventListener('submit', async function(e) {
+                    e.preventDefault(); // Prevents the page from reloading
+
+                    const form = e.target;
+                    const submitBtn = form.querySelector('input[type="submit"]');
+                    const successMessage = document.getElementById('form-success');
+                    
+                    // Change button text to show it's sending
+                    submitBtn.value = "Sending...";
+
+                    // Collect form data
+                    const formData = new FormData(form);
+
+                    try {
+                        // Send data to Web3Forms
+                        const response = await fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            body: formData
+                        });
+
+                        const result = await response.json();
+
+                        if (result.success) {
+                            // Show success message and clear form
+                            successMessage.style.display = 'block';
+                            successMessage.style.color = '#00c86b';
+                            successMessage.innerText = 'Your message was sent successfully!';
+                            form.reset();
+                        } else {
+                            throw new Error('Failed to send');
+                        }
+                    } catch (error) {
+                        // Show error message
+                        successMessage.style.display = 'block';
+                        successMessage.style.color = 'red';
+                        successMessage.innerText = 'Something went wrong. Please try again.';
+                    } finally {
+                        // Reset button text
+                        submitBtn.value = "Send Message";
+                        
+                        // Hide the success message after 5 seconds
+                        setTimeout(() => {
+                            successMessage.style.display = 'none';
+                        }, 5000);
+                    }
+                });
+            </script>
         </section>
     </main>
 
@@ -438,13 +448,6 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
-    <script>
-        // Enhanced form confirmation UX
-        document.getElementById('contact-form').onsubmit = function() {
-            setTimeout(function() {
-                document.getElementById('form-success').style.display = 'block';
-            }, 500);
-        }
-    </script>
+
 </body>
 </html>
